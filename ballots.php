@@ -1,6 +1,9 @@
 <?php
 
-  require __DIR__ . '/vendor/mike42/escpos-php/autoload.php';
+  use Mike42\Escpos\PrintConnectors\CupsPrintConnector;
+  use Mike42\Escpos\Printer;
+
+  require __DIR__ . '/vendor/autoload.php';
 
   $names = [];
 
@@ -12,9 +15,6 @@
   } while ($name);
 
   $ballots = (int) readline("Num ballots:");
-
-  use Mike42\Escpos\PrintConnectors\CupsPrintConnector;
-  use Mike42\Escpos\Printer;
 
   try {
     $connector = new CupsPrintConnector("ReceiptPrinter");

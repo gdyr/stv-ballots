@@ -39,7 +39,6 @@
           str_repeat(" ", 5) . $name . str_repeat(" ", 30 - strlen($name)) . "|    |\n" .
           str_repeat(" ", 35) . " ----\n"
         );
-        echo $name;
       }
 
       $printer->feed(5);
